@@ -8,8 +8,11 @@ public class Regex {
 	public static void main(String[] args) {
 
 		String i;
-		System.out.println("Enter Your First Name :-");
 		Scanner SC = new Scanner(System.in);
+		System.out.println("Enter Your First Name :-");
+		i = SC.next();
+
+		System.out.println("Enter Your Last Name :-");
 		i = SC.next();
 
 		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
