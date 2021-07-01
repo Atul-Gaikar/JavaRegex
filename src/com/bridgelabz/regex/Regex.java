@@ -30,7 +30,7 @@ public class Regex {
 		Matcher matcher1 = pattern1.matcher(j);
 		
 //		System.out.println(i);
-		boolean matchFound1 = matcher.find();
+		boolean matchFound1 = matcher1.find();
 		if (matchFound1) {
 			System.out.println("According To Pattern Matcher is Correct");
 		} else {
