@@ -48,5 +48,18 @@ public class Regex {
 		} else {
 			System.out.println("Email address is Inorrect");
 		}
+		String l;
+		Scanner Scan3 = new Scanner(System.in);
+		System.out.println("Enter Your Mobile Number :-");
+		l = Scan3.next();
+		Pattern pattern3 = Pattern.compile("^[7-9][0-9]{9}$");
+		Matcher matcher3 = pattern3.matcher(l);
+
+		boolean matchFound3 = matcher3.find();
+		if (matchFound3) {
+			System.out.println("Mobile Number is Correct");
+		} else {
+			System.out.println("Mobile Number is Inorrect");
+		}
 	}
 }
