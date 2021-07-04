@@ -11,10 +11,10 @@ public class Regex {
 		Scanner SC = new Scanner(System.in);
 		System.out.println("Enter Your First Name :-");
 		i = SC.next();
-		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
-		Matcher matcher = pattern.matcher(i);
+		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");//Regex sintax
+		Matcher matcher = pattern.matcher(i);//Regex sintax
 
-		boolean matchFound = matcher.find();
+		boolean matchFound = matcher.matches();//Use for identification of correct or incorrect.
 		if (matchFound) {
 			System.out.println("According To Pattern Matcher is Correct");
 		} else {
@@ -28,8 +28,8 @@ public class Regex {
 		Pattern pattern1 = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
 		Matcher matcher1 = pattern1.matcher(j);
 
-//		System.out.println(i);
-		boolean matchFound1 = matcher1.find();
+
+		boolean matchFound1 = matcher1.matches();
 		if (matchFound1) {
 			System.out.println("According To Pattern Matcher is Correct");
 		} else {
@@ -42,7 +42,7 @@ public class Regex {
 		Pattern pattern2 = Pattern.compile("^[a-z0-9+_.-]+@[a-zA-Z0-9.-]+$");
 		Matcher matcher2 = pattern2.matcher(k);
 
-		boolean matchFound2 = matcher2.find();
+		boolean matchFound2 = matcher2.matches();
 		if (matchFound2) {
 			System.out.println("Email address is Correct");
 		} else {
@@ -55,11 +55,25 @@ public class Regex {
 		Pattern pattern3 = Pattern.compile("^[7-9][0-9]{9}$");
 		Matcher matcher3 = pattern3.matcher(l);
 
-		boolean matchFound3 = matcher3.find();
+		boolean matchFound3 = matcher3.matches();
 		if (matchFound3) {
 			System.out.println("Mobile Number is Correct");
 		} else {
 			System.out.println("Mobile Number is Inorrect");
 		}
+		String m;
+		Scanner Scan4 = new Scanner(System.in);
+		System.out.println("Enter Your Password :-");
+		m = Scan4.next();
+		Pattern pattern4 = Pattern.compile("^[a-zA-Z0-9+_.@-]{8}+$");
+		Matcher matcher4 = pattern4.matcher(m);
+
+		boolean matchFound4 = matcher4.matches();
+		if (matchFound4) {
+			System.out.println("The password is Correct");
+		} else {
+			System.out.println("The password is Inorrect");
+		}
+		System.out.println();
 	}
 }
